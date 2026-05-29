@@ -12,7 +12,7 @@ mod tests;
 
 entrypoint!(process_instruction);
 
-declare_id!("4ibrEMW5F6hKnkW4jVedswYv6H6VtwPN6ar6dvXDN1nT");
+declare_id!("CioSeengMboSNzXs7TKnM7q4cF1UA3Jrm8TT9VV4JwCG");
 
 pub fn process_instruction(
     program_id: &Address,
@@ -27,6 +27,8 @@ pub fn process_instruction(
 
     match EscrowInstructions::try_from(discriminator)? {
         EscrowInstructions::Make => instructions::process_make_instruction(accounts, data)?,
+        EscrowInstructions::Take => instructions::process_take_instruction(accounts, data)?,
+        EscrowInstructions::Refund => instructions::process_refund_instruction(accounts, data)?,
     }
 
     Ok(())

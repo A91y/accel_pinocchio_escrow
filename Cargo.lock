@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "accel-p-escrow"
+name = "accel-pinocchio-escrow"
 version = "0.1.0"
 dependencies = [
  "litesvm",
