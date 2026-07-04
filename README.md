@@ -24,6 +24,8 @@ Seeds: `["escrow", maker_pubkey, bump]`
 
 ## Build & Test
 
+Tests use [LiteSVM](https://github.com/LiteSVM/litesvm). Build the SBF binary first, then run.
+
 ```sh
 cargo build-sbf
 cargo test -- --nocapture
